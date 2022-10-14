@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href="..\css\new_payroll_form.css">
     <title>Employee payroll form</title>
-     <script defer src="\..js\new_payroll_form.js"></script>
+    <script defer src="..\js\new_payroll_form.js"></script>
+    <script defer src="..\js\EmployeeDetails.js"></script>
 </head>
 <body>
     <header class="header-content header">
@@ -19,8 +20,8 @@
         </div>
         </div>
     </header>
-        <div class="form-content">
-            <form class="form" >
+        <div id="formId" class="form-content">
+            <form class="form" action="#" onreset="resetForm()" onsubmit="save();return false">
                 <div class ="form-head">
                     Employee Payroll form
                 </div>
@@ -30,6 +31,7 @@
                     <input class="input" type="text" id="name"
                     name="name"  placeholder="your Name.."
                     required>
+                    <error-output class="text-error" for="text"></error-output>
                 </div>
                 <div class = "row-content">
                     <label class ="label text" for="profile">profile image</label>
@@ -148,7 +150,8 @@
                 </div>
                 <div class="row-content">
                     <label for="notes" class="label text">Notes</label>
-                    <textarea name="Notes" id="notes" cols="30" rows="10" class="input" placeholder="" style="height: 100px;"></textarea>
+                    <textarea name="Notes" id="notes" cols="30" rows="10" class="input" placeholder="" 
+                    style="height: 100px;"></textarea>
                 </div>
                 <div class="buttonParent"> 
                     <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
@@ -156,7 +159,7 @@
                         <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                         <button type="reset" class="resetButton button">Reset</button>
                     </div>
-                </div>
+                </div> 
                 </form>
         </div>
        
